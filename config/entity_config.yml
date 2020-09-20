@@ -1,0 +1,43 @@
+
+entity_config:
+    acme_demo:
+        entity:
+            items:
+                comment:
+                    options:
+                        default_value: ""
+                        translatable:  true
+                        indexed:       true
+                    grid:
+                        type:        string
+                        label:       Comment
+                        show_filter: true
+                        filterable:  true
+                        filter_type: string
+                        sortable:    true
+                    form:
+                        type: text
+                        options:
+                            block: entity
+                            label: Comment
+        field:
+            items:
+                auditable:
+                    options:
+                        indexed:  true
+                        priority: 60
+                    grid:
+                        type:        boolean
+                        label:       'Auditable'
+                        show_filter: false
+                        filterable:  true
+                        filter_type: boolean
+                        sortable:    true
+                        required:    true
+                    form:
+                        type: choice
+                        options:
+                            block:       entity
+                            label:       'Auditable'
+                            choices:     ['No', 'Yes']
+                            empty_value: false
